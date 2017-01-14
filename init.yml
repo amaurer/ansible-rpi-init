@@ -24,6 +24,9 @@
       become: true
       hostname: name={{ hosts_name }}
 
+    - name: Change to US English
+      replace: dest=/etc/default/locale regex=^LANG\=en_GB\.UTF\-8$ replace=LANG=en_US.UTF-8
+
     - name: Change Root Default password
       become: true
       user: name=root password="{{ vault_rpi_root_user_pass }}"
