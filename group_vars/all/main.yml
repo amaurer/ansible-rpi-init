@@ -1,0 +1,7 @@
+---
+
+docker_pi_hub_username: "{{ vault_dockerhub_account }}"
+docker_pi_hub_password: "{{ vault_dockerhub_pw }}"
+docker_pi_hub_email: "{{ vault_dockerhub_email }}"
+docker_pi_user: pi
+docker_pi_group_users: [pi]

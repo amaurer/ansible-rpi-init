@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+
+  vars_files:
+    - /etc/ansible/vault.yml
+
+  become: true
+
+  pre_tasks:
+    
+
+
+  roles:
+  - Benaud12.docker-pi
+
+
+  tasks:
+
+
+

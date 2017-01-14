@@ -8,7 +8,6 @@
   pre_tasks:
     
     - name: Install SSH Key
-      become: true
       authorized_key:
         user: pi
         state: present
@@ -21,22 +20,18 @@
 
   tasks:
     - name: Assign Hostnames
-      become: true
       hostname: name={{ hosts_name }}
 
     - name: Change to US English
       replace: dest=/etc/default/locale regex=^LANG\=en_GB\.UTF\-8$ replace=LANG=en_US.UTF-8
 
     - name: Change Root Default password
-      become: true
       user: name=root password="{{ vault_rpi_root_user_pass }}"
 
     - name: Change Pi Default password
-      become: true
       user: name=pi password="{{ vault_rpi_pi_user_pass }}"
 
     - name: Update apt-get
-      become: true
       apt: upgrade=yes
 
     - name: Reboot

@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+
+
+  tasks:
+
+    - name: Reboot
+      become: true
+      command: /sbin/shutdown -r now "Rebooting"
+
