@@ -1,5 +1,6 @@
 ---
 
+datadog_api_key: "{{ vault_datadog_api_key }}"
 docker_pi_hub_username: "{{ vault_dockerhub_account }}"
 docker_pi_hub_password: "{{ vault_dockerhub_pw }}"
 docker_pi_hub_email: "{{ vault_dockerhub_email }}"
