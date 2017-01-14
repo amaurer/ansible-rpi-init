@@ -1,2 +1,4 @@
-# ansible-rpi-init
-Ansible init scripts for Raspberry Pi.
+# Init Scripts in Ansible for Raspberry Pi Cluster
+Run in order. No dependencies
+- init.yml
+- install-docker
