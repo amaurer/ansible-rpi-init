@@ -35,3 +35,7 @@
     - name: Update apt-get
       become: true
       apt: upgrade=yes
+
+    - name: Reboot
+      command: /sbin/shutdown -r now "Reboot for clean start"
+
