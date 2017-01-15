@@ -1,0 +1,22 @@
+---
+
+- hosts: all
+
+
+  become: true
+
+
+  vars_files:
+    - /etc/ansible/vault.yml
+
+
+  tasks:
+    
+    - name: Create SSL directory
+      file: path=/etc/ssl/certs/web/ state=directory
+
+    - name: Deploy SSL certs
+      file: src=files/{{ item }} dest=/etc/ssl/certs/web/{{ item }}
+      with_items:
+      - home.maurer.me.crt
+      - home.maurer.me.key
