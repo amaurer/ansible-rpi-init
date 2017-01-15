@@ -11,17 +11,7 @@
 
 
   roles:
-  # - Benaud12.docker-pi
+  - Benaud12.docker-pi
 
   tasks:
-    
-    - name: install dependencies
-      apt: name=sysstat
-
-    - name: Install Datadog
-      environment:
-        DD_API_KEY: "{{ vault_datadog_api_key }}"
-      shell: /bin/sh -c "$(curl -L https://raw.githubusercontent.com/DataDog/dd-agent/master/packaging/datadog-agent/source/setup_agent.sh)"
-      shell: docker run -d --name dd-agent -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc/:/host/proc/:ro -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro -e API_KEY="{{ vault_datadog_api_key }}" datadog/docker-dd-agent:latest
-
-    - 
+   
