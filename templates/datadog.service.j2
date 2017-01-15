@@ -1,0 +1,10 @@
+[Unit]
+Description=Datadog Agent Service
+
+[Service]
+Restart=always
+ExecStart=/root/.datadog-agent/bin/agent start
+ExecStop=/root/.datadog-agent/bin/agent stop
+
+[Install]
+WantedBy=default.target
