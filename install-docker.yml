@@ -14,4 +14,7 @@
   - Benaud12.docker-pi
 
   tasks:
-   
+
+    - name: Install FTP
+      apt: name=ftp
+    
